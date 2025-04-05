@@ -1,0 +1,5 @@
+aiogram>=3.0
+openai-whisper
+easyocr
+ffmpeg-python
+python-dotenv
