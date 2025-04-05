@@ -1,0 +1,12 @@
+services:
+  - name: tg-media-converter-bot
+    type: web
+    plan: free
+    runtime: python
+    buildCommand: |
+      pip install -r requirements.txt
+      apt-get update && apt-get install -y ffmpeg
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: YOUR_TELEGRAM_BOT_TOKEN
